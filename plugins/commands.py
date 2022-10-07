@@ -152,12 +152,6 @@ async def start(client, message):
                 continue
             await asyncio.sleep(1) 
         await sts.delete()
-        await client.send_message(
-            text="This files will delete after 10 mints !!!\n\n please save this File",
-            chat_id=message.from_user.id,
-        )
-        await asyncio.sleep(1200)
-        sendFiles = []
         return
     elif data.split("-", 1)[0] == "DSTORE":
         sts = await message.reply("Please wait")
@@ -247,12 +241,7 @@ async def start(client, message):
         caption=f_caption,
         protect_content=True if pre == 'filep' else False,
         )
-    await client.send_message(
-            text="This files will delete after 10 mints !!!\n\n please save this File",
-            chat_id=message.from_user.id,
-        )
-        await asyncio.sleep(1200)
-        sendFiles = []   
+                    
 
 @Client.on_message(filters.command('channel') & filters.user(ADMINS))
 async def channel_info(bot, message):
