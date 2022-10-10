@@ -1,5 +1,5 @@
 class Script(object):
-    START_TXT = """Hello {},
+    START_TXT = """HELLO {},
 
 My name is <a href=https://t.me/{}>{}</a>!
 
