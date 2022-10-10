@@ -249,7 +249,6 @@ async def start(client, message):
         caption=f_caption,
         protect_content=True if pre == 'filep' else False,
         )
-     sendFiles.append(k)
     
     await client.send_message(
         text="This files will delete after 5 mints !!!\n\n please save this File",
