@@ -153,10 +153,10 @@ async def start(client, message):
             await asyncio.sleep(1) 
         await sts.delete()
         await client.send_message(
-            text="This files will delete after 5 mints !!!\n\n please save this File",
+            text="This files will delete after 10 mints !!!\n\n please save this File",
             chat_id=message.from_user.id,
         )
-        await asyncio.sleep(60 * 5)
+        await asyncio.sleep(60 * 10)
         for k in sendFiles:
             await k.delete()
         sendFiles = []
@@ -251,10 +251,10 @@ async def start(client, message):
         )
     
     await client.send_message(
-        text="This files will delete after 5 mints !!!\n\n please save this File",
+        text="This files will delete after 10 mints !!!\n\n please save this File",
         chat_id=message.from_user.id
     )
-    await asyncio.sleep(60 * 5)
+    await asyncio.sleep(60 * 10)
     for k in sendFiles:
         await k.delete()
     sendFiles = []           
